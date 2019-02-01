@@ -17,9 +17,8 @@ public class Company {
     protected Company() {
     }
 
-    @OneToMany(mappedBy = "company")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "company")
     private List<Employee> employees;
-
 
     public Company(String name) {
         this.name = name;

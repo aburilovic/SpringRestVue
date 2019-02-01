@@ -1,6 +1,8 @@
 package com.aburilovic.restapp.springrestvue.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -20,6 +22,7 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name="company_id", nullable = true)
     @OnDelete(action = OnDeleteAction.CASCADE)
+    //@JsonIgnore
     private Company company;
 
     @ManyToMany(mappedBy = "employees")
