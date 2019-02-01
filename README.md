@@ -1,4 +1,4 @@
-# spring-rest-vue
+# SpringRestVue
 Used to test Spring REST microservice
 
 - Test project used to create Spring REST microservice (using RestController and Spring Data Rest)
